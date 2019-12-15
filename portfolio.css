@@ -19,8 +19,8 @@ p,li{
 }
 /* Réglage pour compenser le header fixed sur les sections*/
 #cible-1, #cible-2, #cible-3, #cible-4, #cible-5{
-	position: relative;
-	bottom: 260px;
+    position: relative;
+    bottom: 250px;
 }
 .conteneur{
     margin: 0 auto;
@@ -41,6 +41,7 @@ p{
 }
 .column{
     display: column;
+    align-items: center;
 }
 /* Les bordures me permettent de construire la page avec précision
 .conteneur{
@@ -170,8 +171,8 @@ ul{
     height: 1000px;
 }
 .bloc2{ 
-    height: 100px;
-    width: 150px;
+    height: 150px;
+    width: 200px;
     margin: 30px;
     font-size: 20px;
     display: flex;
@@ -183,10 +184,9 @@ ul{
     justify-content: space-around;
 }
 #section3 img{
-    height: 90px;
-    width: 140px;
+    height: 100px;
+    width: 150px;
 }
-
 /******************         SECTION  4       *******************/
 #section4{
     background-image: url("photo/fond.jpg");
@@ -241,7 +241,17 @@ ul{
     height: 1000px;
     padding: 50px 50px;
     color: rgb(142, 170, 151);
-} 
+    text-align: center;
+}
+label, input, .civilité{
+    font-size: 25px; 
+    height: 30px;
+    font-family: 'ClickerScript-Regular.ttf',Arial, Helvetica, sans-serif;
+}
+textarea{
+    height: 400px;
+    width: 400px;
+}
 /******************         FOOTER       *******************/
 #footer
 {

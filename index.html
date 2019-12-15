@@ -17,7 +17,7 @@
                     <li><a href='#cible-2'>Portfolio</li></a>
                     <li><a href='#cible-3'>Compétences</li></a>
                     <li><a href='#cible-4'>Expériences</li></a>
-                    <!--<li><a href='#cible-5'>Contact</li></a>-->
+                    <li><a href='#cible-5'>Contact</li></a>
                     <li><a href='#cible-1'>A propos</li></a>
                 </ul>
             </div>
@@ -79,12 +79,12 @@
             <h1>Compétences</h1>       
             <div class="flex-row">
                 <div class="bloc2"><img src="photo/htmlcss.png" alt="html.css.javascript" title="html.css.JavaScript"></div>
+                <div class="bloc2"><img src="photo/git.png" alt="logo git" title="Logo Git"></div>
+                <div class="bloc2"><img src="photo/GitHub.png" alt="logo.GitHub" title="Logo GitHub"></div>
+                <div class="bloc2"><img src="photo/bootstrap.png" alt="logo bootstrap" title="Logo Bootstrap"></div>
                 <div class="bloc2"><img src="photo/php.png" alt="php" title="Logo PHP"></div>
                 <div class="bloc2"><img src="photo/wordpress.png" alt="wordpress" title="Logo Wordpress"></div>
                 <div class="bloc2"><img src="photo/mysql.png" alt="logo.mysql" title="Logo MySql"></div>
-                <div class="bloc2"></div>
-                <div class="bloc2"></div>
-                <div class="bloc2"></div>
                 <div class="bloc2"></div>
             </div>
         </div>
@@ -97,32 +97,32 @@
             <div class="flex-row">
                 <div class="exp">
                     <div class="bloc4">
-                    	<h2>2017-2019</h2>
-                        	<p>Prada</p>
-                        	<p>Essayeuse-retoucheuse</p>
-                        	<p>Prise de mesure.</p>
-							<p>Réalisation des retouches.</p>
+                        <h2>2017-2019</h2>
+                            <p>Prada</p>
+                            <p>Essayeuse-retoucheuse</p>
+                            <p>Prise de mesure.</p>
+                            <p>Réalisation des retouches.</p>
                     </div>
                     <hr>
                     <div class="bloc4">
-                     	<h2>2016</h2>
-                        	<p>Balenciaga</p>
-                        	<p>Essayeuse-retoucheuse</p>
-                        	<p>Gestion de l'atelier de retouche.</p>
-							<p>Demande de devis, commandes de fournitures.</p>
+                        <h2>2016</h2>
+                            <p>Balenciaga</p>
+                            <p>Essayeuse-retoucheuse</p>
+                            <p>Gestion de l'atelier de retouche.</p>
+                            <p>Demande de devis, commandes de fournitures.</p>
                     </div>
                     <hr>
                     <div class="bloc4">
-                    	<h2>2015</h2>
-                        	<p>Givenchy</p>
-                        	<p>Mécanicienne modèle</p>
-                        	<p>Préparation de la fashion week femme.</p>
+                        <h2>2015</h2>
+                            <p>Givenchy</p>
+                            <p>Mécanicienne modèle</p>
+                            <p>Préparation de la fashion week femme.</p>
                     </div>
                 </div>
                 <div class="diplomes">
                     <h1>Diplôme</h1>
                     <div class="bloc4-2">
-                    	<p><a href="https://www.ifocop.fr/formations-metiers/web-digital/formation-developpeur-integrateur-web/" target="_blank"><img src="photo/logo.ifocop.png" alt="logo.ifocop centre de formation pour adultes"></a></p>
+                        <p><a href="https://www.ifocop.fr/formations-metiers/web-digital/formation-developpeur-integrateur-web/" target="_blank"><img src="photo/logo.ifocop.png" alt="logo.ifocop centre de formation pour adultes"></a></p>
                     <section id="section4-2">
                         <p>IFOCOP Paris 11ème</p>
                         <p>Développeur Intégrateur Web </p>
@@ -136,12 +136,38 @@
     </section>
 <!-----------------------------           SECTION 5        -------------------------------->
     
-   <!-- <section id='section5'>
+    <section id='section5'>
     <div id="cible-5"></div>
-            <div class="conteneur">                    
-                <h1>Contact</h1>
-			    <form action="get" method=""></form>                
-            </div>  
+        <div class="conteneur">
+            <div class="column">                    
+            <h1>Contact</h1>
+                <form action="get" method=""></form>
+                    <div class="playground">
+                      <p>  
+                        <label>Civilité</label>
+                        <input type="radio" name="civilité" value="f">Madame
+                        <input type="radio" name="civilité" value="h">Monsieur
+                    </p>
+                    <p>
+                        <label for="nom">Nom</label>
+                        <input id="Nom" type="text" name="Nom">
+                    </p>
+                    <p>
+                        <label for=Objet>Objet</label>
+                        <input id="Objet" type="text" name="Objet">
+                    </p>
+                    <p>
+                        <label for="message">Veuillez taper ici votre message, svp.
+                        </label>
+                        <textarea name="message" id="message"></textarea>
+                    </p>
+                    <p>
+                        <label>Votre Email</label>
+                        <input type="email" id="email" name="email">              
+                    </p>
+<!----------------------------- VALIDE LE FORMULAIRE --------------------------> 
+                    <input type="submit" value="Valider" name="Valider">
+            </div>
         </div>
     </section>
     
