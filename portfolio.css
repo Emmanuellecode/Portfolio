@@ -43,6 +43,22 @@ p{
     display: column;
     align-items: center;
 }
+.col-1{width: 8.33333333%;}
+.col-2{width: 16.66666666%;}
+.col-3{width: 25%;}
+.col-4{width: 33.33333333%;}
+.col-5{width: 41.66666666%;}
+.col-6{width: 50%;}
+.col-7{width: 58.33333333%;}
+.col-8{width: 66.66666666%;}
+.col-9{width: 75%;}
+.col-10{width: 83.33333333%;}
+.col-11{width: 91.66666666%;}
+.col-12{width: 100%;}
+
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12{
+    padding: 15px;
+}
 /* Les bordures me permettent de construire la page avec précision
 .conteneur{
     border: 2px solid red;}
@@ -123,9 +139,6 @@ ul{
 .texte1{
     height: 400px;
 }
-.bloc1{
-    
-}
 .conteneur #bloc1-2{
     height: 95px;
     width: 95px;
@@ -170,15 +183,6 @@ ul{
     padding: 50px 50px;
     height: 1000px;
 }
-.bloc2{ 
-    height: 150px;
-    width: 200px;
-    margin: 30px;
-    font-size: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 #section3 .flex-row{
     flex-wrap: wrap;
     justify-content: space-around;
@@ -195,23 +199,16 @@ ul{
     height: 1000px;
     padding: 50px 50px;
 } 
-.bloc4{
-    height: 170px;
-} 
-.bloc4-2{
-    height: 330px;    
-}
+
 #section4 h2{
    font-size: 25px;
 }   
 .exp{
-    width: 60%;
     color: #fff;
 }
 .diplomes{
     background-color: rgb(142, 170, 151);
     color: #fff;
-    width: 40%;
     text-align: center;
     box-shadow: 2px 2px 15px rgb(142, 170, 151);
     padding: 10px 20px;
