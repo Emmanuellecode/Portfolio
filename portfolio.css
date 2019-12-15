@@ -1,0 +1,261 @@
+/*****************        STRUCTURE     ******************/
+@font-face 
+{
+    font-family: 'ClickerScript-Regular.ttf';
+    src: url('ClickerScript-Regular.ttf');
+}
+*{
+    box-sizing: border-box;
+}
+body{ 
+    margin-top: 138px;
+    font-family: 'ClickerScript-Regular.ttf',Arial, Helvetica, sans-serif;
+}
+body,h1,p,a,ul{
+    margin: 0;
+}
+p,li{
+    font-family: Helvetica, sans-serif;
+}
+/* Réglage pour compenser le header fixed sur les sections*/
+#cible-1, #cible-2, #cible-3, #cible-4, #cible-5{
+	position: relative;
+	bottom: 260px;
+}
+.conteneur{
+    margin: 0 auto;
+    width: 80%;
+}
+
+h1{
+    font-size:55px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+p{
+    font-size: 20px;
+}
+.flex-row{
+    display:flex;
+    justify-content: center;
+}
+.column{
+    display: column;
+}
+/* Les bordures me permettent de construire la page avec précision
+.conteneur{
+    border: 2px solid red;}
+.titre4,.titre5,.bloc1,.bloc2, .bloc4{
+    border: dashed grey;
+}*/
+/*****************        HEADER     ******************/
+#header{
+    background-color:rgb(142, 170, 151);    
+    color: #fff;
+    padding: 30px 50px 30px 50px;
+    position:fixed;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+#header h1{
+    text-align: center;
+    margin:0;
+    width: 100%;
+    font-size: 75px;
+}
+#nom{
+    width: 40%;
+    text-align: left;
+}
+#nom img{
+    height: 60px;
+    width: 60px;
+}
+.conteneur #menu{
+    width: 60%;
+    height: 15px;
+    color: #fff;
+    margin: 20px auto 20px auto;
+}
+ul{
+    text-align: center;
+}
+#menu li{
+    list-style-type: none;
+    height: 25px;
+    width: 200px;    
+}
+#menu a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    padding: 5px 8px;
+}
+#menu a:hover{
+    background-color: #fff;
+}
+#menu li :hover{
+    color: rgb(142, 170, 151);
+    background-color: #fff;
+}
+/******************        SECTION 1      *****************/
+#section1{
+    height: 1000px;
+    background-image: url("photo/fond.jpg");
+    background-size: 100%;
+    background-attachment: fixed;
+    color: #fff;
+    padding: 280px 50px;
+}  
+#section1 hr{
+    margin: 25px;
+    color: rgb(142, 170, 151);
+}
+#section1 img{    
+    height: 90px;
+    width: 90px;
+}
+.texte1{
+    height: 400px;
+}
+.bloc1{
+    
+}
+.conteneur #bloc1-2{
+    height: 95px;
+    width: 95px;
+}
+
+/******************         SECTION  2       *******************/
+#section2{
+    background-color:rgb(142, 170, 151);
+    background-size: 100%;
+    background-attachment: fixed;
+    padding: 50px 50px;
+    color: white;
+    height: 1000px;
+}
+.titre4{
+    width: 50%;
+    color: #388765; 
+    height: 300px;
+    width: 300px;
+    margin: 10px 5px;
+}
+.titre4 img{
+    height: 300px;
+    width: 300px;
+    box-shadow: 2px 2px 15px #20468d;
+}
+.titre5{
+    width: 50%;
+    color: #388765; 
+    height: 300px;
+    margin: 10px 5px;
+}
+#section2 h1{
+    color: #fff;
+}
+/******************         SECTION  3       *******************/
+#section3{
+    background-color: #fff;
+    background-size: 100%;
+    background-attachment: fixed;    
+    color: rgb(142, 170, 151);
+    padding: 50px 50px;
+    height: 1000px;
+}
+.bloc2{ 
+    height: 100px;
+    width: 150px;
+    margin: 30px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#section3 .flex-row{
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#section3 img{
+    height: 90px;
+    width: 140px;
+}
+
+/******************         SECTION  4       *******************/
+#section4{
+    background-image: url("photo/fond.jpg");
+    background-size: 100%;
+    background-attachment: fixed;    
+    height: 1000px;
+    padding: 50px 50px;
+} 
+.bloc4{
+    height: 170px;
+} 
+.bloc4-2{
+    height: 330px;    
+}
+#section4 h2{
+   font-size: 25px;
+}   
+.exp{
+    width: 60%;
+    color: #fff;
+}
+.diplomes{
+    background-color: rgb(142, 170, 151);
+    color: #fff;
+    width: 40%;
+    text-align: center;
+    box-shadow: 2px 2px 15px rgb(142, 170, 151);
+    padding: 10px 20px;
+}
+#section4 p{
+    text-align: center;
+}
+#section4 img{
+    height: 70px;
+    width: 70px;
+}
+#section4 h1{
+    color: #fff;
+}
+#section4-2{
+    padding: 30px;
+}
+#section4 hr{
+    margin: 10px 150px 10px 150px;
+    color: rgb(142, 170, 151);
+}
+/******************        SECTION 5     *******************/
+#section5{
+    background-image: #fff;
+    background-size: 100%;
+    background-attachment: fixed;    
+    height: 1000px;
+    padding: 50px 50px;
+    color: rgb(142, 170, 151);
+} 
+/******************         FOOTER       *******************/
+#footer
+{
+    background-color:rgb(142, 170, 151);    
+    padding: 30px 50px 30px;
+}
+.conteneur h2{
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+}
+#footer span{
+    font-weight: normal;
+}
+
+@media 
