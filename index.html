@@ -1,181 +1,398 @@
 <!DOCTYPE html>
 <html lang="fr">
+
+    
+    <!-- **************************************************************** -->
+    <!-- ************************       HEAD      *********************** -->
+    <!-- **************************************************************** -->
+   
     <head>
-        <meta charset="UTF-8">
-        <title>Emmanuelle Galinat Portfolio</title>
-        <link rel="stylesheet" href="portfolio.css">
+        <meta charset="utf-8"/>
+
+        <!-- La balise meta description permet une meilleur indexation de la part de Google.
+            C'est la description qui sera affiché dans le moteur de recherche. -->
+        <meta name="description" content="Cliquez pour visiter le portfolio d'Emmanuelle Galinat. Découvrez ses réalisations en tant que développeur intégrateur web. Un lien direct vers son profil Linkedin vous permettra d'apprécier son parcours professionnel.">
+
+        <!-- Meta premettant de faire fonctionner le responsive -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Titre de la page -->
+        <title>Emmanuelle Galinat - Portfolio Développeur Intégrateur Web</title>
+
+        <!-- Lien qui charge le CSS de BOOTSTRAP ( le JS se trouve en fin de page ) -->
+        <link rel="stylesheet" href="bootstrap-4.6.0-dist/css/bootstrap.css">
+
+        <!-- Lien qui charge le CSS de JQUERY ( le JS se trouve en fin de page ) -->
+        <link href="jQueryUi/jquery-ui.css" rel="stylesheet">
+        
+        <!-- Lien qui charge le fichier normalize.css -->
+        <link rel="stylesheet" href="css/normalize.css">
+
+        <!-- Lien qui charge le fichier CSS personnalisé -->
+        <link rel="stylesheet" href="css/portfolio.css">
+
+        
     </head>
-<body>
-    <!---------------------------HEADER-------------------------------->
-    <header id="header">
-        <div class="conteneur">
-            <h1>Emmanuelle Galinat</h1>
-        </div>
-        <nav class="conteneur">
-            <div id="menu">
-                <ul class="flex-row">
-                    <li><a href='#cible-2'>Portfolio</li></a>
-                    <li><a href='#cible-3'>Compétences</li></a>
-                    <li><a href='#cible-4'>Expériences</li></a>
-                    <li><a href='#cible-5'>Contact</li></a>
-                    <li><a href='#cible-1'>A propos</li></a>
-                </ul>
-            </div>
-        </nav> 
-    </header>
-<!-------------------------------       SECTION  1     ------------------------------->
-    <section id="section1">
-    <div id="cible-1"></div>
-        <div class="conteneur">
-            <div class="column">
-                <div class="texte1">
-                    <h1>A propos de moi</h1>
-                    <p>Ayant intégré le centre de formation Ifocop en Novembre 2019, je développe actuellement mes compétences dans la création de site web. A l’issu de cette formation, je maitriserai les languages HTML, CSS, JavaScript et PHP. 
-                    </p>
-                    <hr>
-                    <p>Curieuse, méthodique et motivée, je suis ouverte à l'apprentissage d'autres langages, mon but étant de monter en compétences au sein d'une équipe dynamique et de pouvoir développer des projets innovants.</p>
-                    <hr>   
-                    <p>Disponible à partir de mars 2020 pour un poste de développeur web junior, vous pouvez me contacter si votre entreprise est en recherche de besoins ou pour des renseignements complémentaires.
-                    </p>     
-                </div>  
-            </div>
-        </div>
-        <br>
-        <br>
-        <br>
-        <div class="conteneur">
-            <div class="flex-row">
-                    <div class="bloc1">
-                            <a href="https://www.linkedin.com/in/emmanuelle-galinat/" target="_blank"><img src="photo/linkedin.png" alt="linkedin" title="linkedin"></a>
+
+    <!-- **************************************************************** -->
+    <!-- ******************         FIN DU HEAD          **************** -->
+    <!-- **************************************************************** -->
+
+
+    <!-- **************************************************************** -->
+    <!-- ************************       BODY      *********************** -->
+    <!-- **************************************************************** -->
+
+    <body>
+    <!--   ******          Bienvenue dans le code de mon portfolio !     ******
+
+            Il a été réalisé avec les technologies suivantes :
+
+            - html5 pour la structure des pages.
+            - css3 pour la mise en forme des pages.
+            - bootstrap4 pour la navbar, le formulaire ainsi que pour les class css responsive.
+            - jquery pour l'accordéon de la section "Qui suis-je" .
+            - javascript pour le titre principal du site .
+        
+            Le portfolio est en constante évolution en fonction de l'avancement de mes compétences. 
+
+            N'hésitez pas à me contacter si vous souhaitez avoir plus de renseignements !
+
+            En vous remerciant pour l'intérêt que vous avez porté à mon travail !
+
+        ****************                 Emmanuelle          **************** -->
+
+        <!-- **************************************************************** -->
+        <!-- ****************       DEBUT DU HEADER          **************** -->
+        <!-- **************************************************************** -->
+        
+        <header id="header" class="pt-2 pb-2 fixed vw-100 structure">
+            <div class="container">
+                <div class="row">
+                    <!-- Début du conteneur du titre principal -->
+                    <div class="navbar-brand offset-1 col-3 pr-md-5 pl-md-5 offset-md-4 col-md-4">
+                        <img class="w-100 pt-2" src="photo/logo-portfolio.png" alt="logo de mon portfolio">
                     </div>
-            <div class="flex-row">
-                    <div class="bloc1-2">
-                        <a href="photo/cv.emmanuelle.galinat.pdf">
-                        <a href="photo/cv-emmanuelle-galinat.pdf" target="_blank"><img src="photo/pdf.jpg" alt="cv.pdf" title="cv.pdf"></a>
+                    <!-- Fin du conteneur du titre principal -->
+                    <!-- ****************   Début du conteneur de la navbar  ****************  -->
+                    <div id="navbar" class="navbar h1 offset-4 col-3 offset-md-0 col-md-12 m-md-0 justify-content-center">
+                        <nav class="navbar-expand-md navbar-light">
+                            <!-- La balise h1 avec les attributs sr-only sr-only-focusable permettent aux personnes mal-voyantes de trouver plus facilement le menu principal-->
+                            <h1 class="sr-only sr-only-focusable">Menu principal</h1>
+                            <button class="w-100 navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav nav-fill">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#cible-1">Portfolio</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#cible-2">A propos</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#cible-3">Compétences</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#cible-4">Diplôme</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#cible-5">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                    <!-- ****************   Fin du conteneur de la navbar  ****************  -->
+                </div>
+            </div>
+           
+        </header>
+        <!-- **************************************************************** -->
+        <!-- ****************         FIN DU HEADER          **************** -->
+        <!-- **************************************************************** -->
+
+        <!-- **************************************************************** -->
+        <!-- ****************         DEBUT DU MAIN          **************** -->
+        <!-- **************************************************************** -->
+        
+        <main id="mainmenu">
+
+            <!-- ****************       SECTION  1     **************** -->
+            <section id="section1" class="pt-5 pb-5 structure">
+
+                <!-- Ancre relié à la Navbar -->
+                <div id="cible-1"></div>
+
+                <!-- Titre de la section -->
+                <section id="welcome-section" class="container">
+                    <h1 class="titleSection pb-3 pb-md-5">Bienvenue sur mon portfolio !</h1>
+                    <!--<div class="text-center">
+                        <p>Je suis Emmanuelle Galinat</p>
+                    </div>-->
+                </section>
+                <!-- Fin du titre de la section -->
+
+                <!-- Début du slider Porfolio -->
+                <div id="projects" class="container">
+                    <section id="carouselPorfolio" class="row no-gutters carousel slide" data-ride="carousel">
+                        <div class="col-12 pt-3">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselPorfolio" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselPorfolio" data-slide-to="1"></li>
+                                <!--<li data-target="#carouselPorfolio" data-slide-to="2"></li>-->
+                            </ol>
+                            <div class="carousel-border carousel-inner">
+                                <div class="carousel-item active project-tile">
+                                    <a href="https://hotelcop.emmanuelle-galinat.fr/" target="_blank" title="Lien vers le projet Hôtelcop">
+                                        <img class="w-100" src="photo/site-hotelcop-html-css-js-portfolio.jpg" alt="hotelcop" title="hôtel Cop">
+                                    </a>
+                                    <h2 class="pt-3">Projet Hotelcop : </h2>
+                                    <h3 class="mb-5">Réalisation d'un site fictif d'un hôtel 5 étoiles en html/css/bootstrap.</h3>
+                                </div>
+                                <div class="carousel-item project-tile">
+                                    <a href="https://nature-zero-dechet.emmanuelle-galinat.fr/" target="_blank" title="Lien vers le projet Wordpress">
+                                        <img class="w-100" src="photo/site-zero-dechet-wordpress-portfolio.jpg" alt="Projet Alam Zero Dechet Wordpress" title="Projet Alam Zero Dechet Wordpress">
+                                    </a>
+                                    <h2 class="pt-3">Projet Wordpress : </h2>
+                                    <h3 class="mb-5">Réalisation d'un site fictif avec le CMS Wordpress</h3>
+                                </div>	
+                                <!--<div class="carousel-item">
+                                    <a href="http://switch.emmanuelle-galinat.fr/" target="_blank" title="Lien vers le projet Switch">
+                                        <img class="w-100" src="photo/site-switch-php-portfolio.jpg" alt="Projet Switch Ifocop" title="Projet Switch Ifocop">
+                                    </a>
+                                    <h2 class="pt-3">Projet Switch : </h2>
+                                    <h3 class="mb-5">Réalisation d'un site fictif de location de salle en PHP/MYSQL</h3>
+                                </div>-->	
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselPorfolio" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselPorfolio" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>       
+                    </section><!-- Fin du slider Porfolio -->
+                </div>
+            </section><!-- Fin de la section 1-->
+
+            <!-- ****************        SECTION 2            **************** -->
+            <section id='section2' class="pt-5 pb-5 structure">
+
+                <!-- Ancre relié à la Navbar -->
+                <div id="cible-2"></div>
+
+                <!-- Titre de la section -->
+                <h1 class="titleSection pb-3 pb-md-5">Qui suis-je ?</h1>
+                <!-- Fin du titre de la section -->
+                <div class="container">
+                    <div id="accordion" ><!-- Début du container Accordéon -->
+                        <h3 class="title-accordion">Mon parcours</h3>
+                            <section class="insideaccordion text-center">
+                                <p>&nbsp;&nbsp;&nbsp;Ayant exercé le métier d'essayeuse-retoucheuse durant plus de 10 ans au sein de maisons de couture, j'ai entrepris une reconversion professionnelle en tant que <strong>développeur intégrateur web</strong>, l'informatique étant un domaine qui m'a toujours intérréssé.</p>
+                                <p>&nbsp;&nbsp;&nbsp;En Novembre 2019, j'ai intégré le centre de formation Ifocop Paris XI.</p> 
+                                <p>&nbsp;&nbsp;&nbsp;J'y ai acquis des compétences dans la création de site web en apprenant les languages HTML5, CSS3, Bootstrap4, JavaScript et PHP ainsi que le CMS Wordpress.</p>
+                                <p>&nbsp;&nbsp;&nbsp;De mars à juin 2019, j'ai intégré la société Autobacs pour y effectuer un stage en tant qu'intégrateur Web.</p>
+                                <p>&nbsp;&nbsp;&nbsp;J'étais en charge de la refonte des pages du site <strong>e-commerce</strong> sous <strong>Magento</strong> ainsi que de l'intégration des fiches produits.</p>
+                            </section>
+                        <h3 class="title-accordion">Soft skills</h3>
+                            <section class="insideaccordion text-center">
+                                <p>Flexibilité</p>
+                                <p>Sens des responsabilités.</p>    
+                                <p>Esprit créatif.</p>    
+                                <p>Prises d'initiatives.</p>    
+                            </section>
+                        <h3 class="title-accordion">Hards Skills</h3>
+                            <section class="insideaccordion text-center">
+                                <p>Rédiger un cahier des charges techniques.</p>
+                                <p>Référencer de manière naturelle un site web (SEO).</p>    
+                                <p>Dynamisez une page web avec des animations CSS.</p>    
+                                <p>Créer un site e-commerce avec Wordpress.</p>    
+                                <p>Intégration de fiches produits et création de contenus.</p>    
+                                <p>Connaissance des outils de gestion de versions GIT.</p>
+                            </section>
+                    </div><!-- Fin du container Accordéon -->
+                </div>
+            </section><!-- Fin de la section 2-->
+
+            <!-- ****************           SECTION 3           **************** -->
+            <section id="section3" class="pt-5 pb-5 structure">
+
+                <!-- Ancre relié à la Navbar -->
+                <div id="cible-3"></div>
+           
+                <!-- Titre de la section -->
+                <h1 class="titleSection pb-3 pb-md-5">Compétences</h1> 
+                <!-- Fin du titre de la section -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-3 mb-3"><img class="w-50" src="photo/html.jpg" alt="logo html5" title="logo html5"></div>
+                        <div class="col-3 mb-3"><img class="w-50" src="photo/css.jpg" alt="logo css" title="logo css"></div>
+                        <div class="col-3 mb-3"><img class="w-50" src="photo/js.jpg" alt="logo javascript" title="logo JavaScript"></div>
+                        <div class="col-3 mb-3"><img class="w-50" src="photo/boot.jpg" alt="logo bootstrap" title="Logo Bootstrap"></div>
+                        <div class="offset-2 col-3"><img class="w-50" src="photo/git.jpg" alt="logo git" title="Logo Git"></div>
+                        <div class="col-3"><img class="w-50" src="photo/GitHub.jpg" alt="logo GitHub" title="Logo GitHub"></div>    
+                        <div class="col-3"><img class="w-50" src="photo/wordpress.jpg" alt="logo wordpress" title="Logo Wordpress"></div>
+                    </div>
+                </div>     
+            </section>
+            <!-- ****************           SECTION 4        **************** -->
+            <section id='section4' class="pt-5 pb-5 structure">
+                <!-- Ancre relié à la Navbar -->
+                <div id="cible-4"></div>  
+                <!-- Titre de la section -->                  
+                <h1 class="titleSection pb-3 pb-md-5" >Diplôme</h1>
+                <!-- Fin du titre de la section -->
+                <div class="container">
+                    <div class="diplomes pt-5 pb-5"> 
+                        <div class="row">
+                            <figure class="col-12 col-md-6 text-center">
+                                <a href="https://www.ifocop.fr/formations-metiers/web-digital/formation-developpeur-integrateur-web/" target="_blank"><img src="photo/logo.ifocop.png" alt="logo ifocop centre de formation pour adultes" title="logo ifocop centre de formation pour adultes"></a>
+                                <figcaption class="d-none">IFOCOP Paris</figcaption>
+                            </figure>
+                            <section id="section4-2" class="text-center col-12 col-md-6">
+                                <h1>Développeur Intégrateur Web</h1>
+                                <p>Diplôme de niveau 6 - RNCP</p>
+                            </section>
+                        </div>
                     </div>
                 </div>
-            </div>      
-        </div>
-    </section>
-<!-------------------------------        SECTION 2            ------------------------------->
-    <section id='section2'>
-    <div id="cible-2"></div>
-        <div class="conteneur">
-            <h1>Portfolio</h1>
-            <div class="flex-row">
-                <div class="titre4">                             
-                    <a href="manuereva/page1.html" target="_blank"><img src="manuereva/images/4.png" alt="Logo.manue.reva.boutique"></a>
-                </div>
-                <!--<div class="titre5">
-                    <h2>Plongée sous-marine</h2>
-                </div>-->
-            </div>  
-        </div>
-    </section>    
-<!-----------------------------           SECTION 3           --------------------------------->
-    <section id="section3">
-    <div id="cible-3"></div>
-        <div class="conteneur">
-            <h1>Compétences</h1>       
-            <div class="flex-row">
-                <div class="col-4"><img src="photo/htmlcss.png" alt="html.css.javascript" title="html.css.JavaScript"></div>
-                <div class="col-4"><img src="photo/git.png" alt="logo git" title="Logo Git"></div>
-                <div class="col-4"><img src="photo/GitHub.png" alt="logo.GitHub" title="Logo GitHub"></div>
-                <div class="col-4"><img src="photo/bootstrap.png" alt="logo bootstrap" title="Logo Bootstrap"></div>
-                <div class="col-4"><img src="photo/php.png" alt="php" title="Logo PHP"></div>
-                <div class="col-4"><img src="photo/wordpress.png" alt="wordpress" title="Logo Wordpress"></div>
-                <div class="col-4"><img src="photo/mysql.png" alt="logo.mysql" title="Logo MySql"></div>
-                <div class="col-4"></div>
+            </section>
+            <!-- ****************           SECTION 5        **************** -->
+            <section id='section5' class="pt-5 pb-5 structure">
+                <!-- Ancre relié à la Navbar -->
+                <div id="cible-5"></div>
+                <!-- Titre de la section -->
+                <h1 class="titleSection pb-3 pb-md-5" >Contact</h1>
+                <!-- Fin du titre de la section -->
+                <div class="container">
+                    <form id="formulaire" action="thanks.html" ><!-- Début du formulaire -->
+                        <div class="row pt-5 pb-5" >
+                            <div class="offset-1 col-10 offset-md-1 col-md-5 ">                   
+                                <div class="form-group">
+                                    <!-- La valeur de l'attribut for permet de lier la balise <label> à la balise <input> -->
+                                    <label class="col-form-label" for="lname" >Nom</label>
+                                    <input type="text" name="lname" id="lname" class="form-control" required title="Entrez votre nom.">
+                                    <!--    La balise input est une balise non fermante depuis le html5,
+                                            En xhtml il est obligatoire de fermer cette balise mais pas en html 5 -->
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-form-label" for="fname">Prénom</label>
+                                    <input type="text" name="fname" id="fname" class="form-control" required title="Entrez votre prénom.">
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-form-label" for="email">Email</label>
+                                    <input type="email" name="email" id="email" class="form-control" required title="Entrez votre adresse email.">
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-form-label" for="tel">Téléphone</label>
+                                    <input type="text" name="tel" id="tel" class="form-control" required title="Entrez votre numéro de téléphone.">
+                                </div>
+                            </div>
+                            <div class="offset-1 col-10 offset-md-0 col-md-5 "> 
+                                <div class="form-group">
+                                    <label for="message" class="col-form-label">Message</label>
+                                    <textarea name="message" id="message" class="form-control" required title="Entrez votre message." style="height: 314px;"></textarea>
+                                </div>
+                            </div>  
+                        </div>
+                        <!-- **************** Bouton qui valide le formulaire et renvoie vers la page thanks.html **************** --> 
+                        <div class="row justify-center align-items">
+                            <div class="offset-2 col-8 mb-5">
+                                <button type="submit" class="bouton-valider btn btn-primary w-100">Valider</button>
+                            </div> 
+                        </div> 
+                    </form><!-- Fin du formulaire -->  
+                </div>                                     
+            </section>
+        </main>
+
+        <!-- **************************************************************** -->
+        <!-- ****************           FIN DU MAIN          **************** -->
+        <!-- **************************************************************** -->
+
+       
+        <!-- **************************************************************** -->
+        <!-- ************************       FOOTER      ********************* -->
+        <!-- **************************************************************** -->
+        
+        
+        <footer id="footer" class="text-center p-2 structure">
+            <!-- Conteneur du footer -->
+            <div class="container-fluid pt-5">
+                <div class="row d-flex">
+                    <div class="offset-3 col-6 offset-md-0 col-md-4 order-md-2 pt-md-4 mb-2">
+                        <p><img class="w-50" src="photo/logo-portfolio.png" alt="logo de mon portfolio"></p>
+                    </div>
+                    <div class="col-12 col-md-4 order-md-1 mb-2">
+                        <h1 class="h3 mt-0">Adresse</h1>
+                        <address ><!-- Adresse du site -->
+                            <p>95110 Sannois</p>
+                            <p>France</p>
+                        </address><!-- Fin adresse du site -->
+                    </div>
+                    <div class="col-12 col-md-4 order-md-3 mb-2">
+                        <h2 class="h3">Liens utiles</h2>
+                        <p><a href="mentions-legales.html" title="Lien vers les mentions légales du portfolio.">Mentions légales</a></p>
+                        <p><a href="#cible-5">Contact</a></p>
+                        <p><a href="#cible-2">A propos</a></p>
+                    </div>
+                    <section class="col-12 pt-4 order-md-4">
+                        <span>&copy; 2021 &nbsp;&nbsp;| &nbsp;&nbsp; Développé par Emmanuelle Galinat</span>
+                    </section> 
+                </div>         
             </div>
-        </div>
-    </section>
-<!-----------------------------           SECTION 4        -------------------------------->
-    <section id='section4'>
-    <div id="cible-4"></div>
-        <div class="conteneur">                    
-            <h1>Expériences professionnelles</h1>
-            <div class="flex-row">
-                <div class="exp">
-                    <div class="col-12">
-                        <h2>2017-2019</h2>
-                            <p>Prada</p>
-                            <p>Essayeuse-retoucheuse</p>
-                            <p>Prise de mesure.</p>
-                            <p>Réalisation des retouches.</p>
-                    </div>
-                    <hr>
-                    <div class="col-12">
-                        <h2>2016</h2>
-                            <p>Balenciaga</p>
-                            <p>Essayeuse-retoucheuse</p>
-                            <p>Gestion de l'atelier de retouche.</p>
-                            <p>Demande de devis, commandes de fournitures.</p>
-                    </div>
-                    <hr>
-                    <div class="col-12">
-                        <h2>2015</h2>
-                            <p>Givenchy</p>
-                            <p>Mécanicienne modèle</p>
-                            <p>Préparation de la fashion week femme.</p>
-                    </div>
-                </div>
-                <div class="diplomes">
-                    <h1>Diplôme</h1>
-                    <div class="col-12">
-                        <p><a href="https://www.ifocop.fr/formations-metiers/web-digital/formation-developpeur-integrateur-web/" target="_blank"><img src="photo/logo.ifocop.png" alt="logo.ifocop centre de formation pour adultes"></a></p>
-                    <section id="section4-2">
-                        <p>IFOCOP Paris 11ème</p>
-                        <p>Développeur Intégrateur Web </p>
-                        <p>Diplôme de niveau 6 - RNCP</p>
-                        <p>(En cours)<p>
-                    </section>
-                    </div>
-                </div>
-            </div>  
-        </div>
-    </section>
-<!-----------------------------           SECTION 5        -------------------------------->
-    
-    <section id='section5'>
-    <div id="cible-5"></div>
-        <div class="conteneur">
-            <div class="column">                    
-            <h1>Contact</h1>
-                <form action="get" method=""></form>
-                    <div class="playground">
-                      <p>  
-                        <label>Civilité</label>
-                        <input type="radio" name="civilité" value="f">Madame
-                        <input type="radio" name="civilité" value="h">Monsieur
-                    </p>
-                    <p>
-                        <label for="nom">Nom</label>
-                        <input id="Nom" type="text" name="Nom">
-                    </p>
-                    <p>
-                        <label for=Objet>Objet</label>
-                        <input id="Objet" type="text" name="Objet">
-                    </p>
-                    <p>
-                        <label for="message">Veuillez taper ici votre message, svp.
-                        </label>
-                        <textarea name="message" id="message"></textarea>
-                    </p>
-                    <p>
-                        <label>Votre Email</label>
-                        <input type="email" id="email" name="email">              
-                    </p>
-<!----------------------------- VALIDE LE FORMULAIRE --------------------------> 
-                    <input type="submit" value="Valider" name="Valider">
-            </div>
-        </div>
-    </section>
-    
-<!-----------------------------           FOOTER           -------------------------------->
-    <footer id="footer">
-        <div class="conteneur">
-            <h2>Copyright 2019 |<span>Mentions légales</span></h2>
-        </div>
-    </footer>
-</body>
+        </footer>
+
+        <!-- **************************************************************** -->
+        <!-- ****************          FIN DU FOOTER         **************** -->
+        <!-- **************************************************************** -->
+
+
+        <!-- **************************************************************** -->
+        <!-- ************************       SCRIPT      ********************* -->
+        <!-- **************************************************************** -->
+        
+        <!-- Lien qui charge le js de JQUERY ( le CSS se trouve en haut de page ) -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+        </script>
+        <!-- Lien qui charge BOOTSTRAP.js -->
+        <script src="bootstrap-4.6.0-dist/js/bootstrap.min.js"></script>
+        <!-- Lien qui charge le JQuery.JS -->
+        <script src="jQuery/jquery-3.4.1.js"></script>
+        <!-- Lien qui charge JQuery-UI.JS  qui fait fonctionner l'accordéon-->
+        <script src="jQueryUi/jquery-ui.js"></script>
+        <!-- Lien qui charge le fichier JS personnalisé -->
+        <script src="portfolio.js"></script>
+
+
+        <!--Script de l'accordéon jQuery de la section "à propos" -->
+        <script>
+            $( "#accordion" ).accordion();     
+        </script>
+        <!-- Script FreeCodeCamp -->
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+        <!-- **************************************************************** -->
+        <!-- ****************         FIN DU SCRIPT          **************** -->
+        <!-- **************************************************************** -->
+
+    </body>
+        <!-- **************************************************************** -->
+        <!-- ****************           FIN DU BODY          **************** -->
+        <!-- **************************************************************** -->
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
