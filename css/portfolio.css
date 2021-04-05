@@ -73,7 +73,15 @@ img{
 
 
 /******************         SECTION  1   ( SLIDER )    *******************/
-
+#welcome-section{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.titleWelcomeSection{
+    
+}
 #section1{
     background-color: var(--light-green);
     background-attachment: fixed;
