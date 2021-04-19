@@ -99,6 +99,7 @@ img{
 
 #section2 , #section4{
     color: var(--twhite);
+    height: 100vh;
 }
 .title-accordion{
     background-color: var(--light-green);
