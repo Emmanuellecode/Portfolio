@@ -132,6 +132,7 @@ img{
 #section3{
     background-color: #fff;
     color: var(--light-green);
+    height: 100vh;
 }
 
 /******************        SECTION 5  ( CONTACT )   *******************/
