@@ -6,9 +6,10 @@
 /* Pseudo-élément root qui permet de cibler la racine html */
 :root{
     --black:333333;
-    --twhite: rgb(255, 255, 255, 0.8); 
-    --dark-green :rgb(67, 82, 71);
-    --light-green : rgb(142, 170, 151);
+    --white: #ffffff;
+    --twhite: rgb(255, 255, 255, .3); 
+    --dark-green :#435247;
+    --light-green : #8eaa97;
     /* Le box-sizing: border-box applique la largueur des éléments, margin et padding inclus 
     box-sizing: border-box;*//*Inutile ici car présent dans bootstrap*/
 }
@@ -79,9 +80,6 @@ img{
     align-items: center;
     justify-content: center;
 }
-.titleWelcomeSection{
-    
-}
 #section1{
     background-color: var(--light-green);
     background-attachment: fixed;
@@ -93,12 +91,12 @@ img{
 }
 .carousel-item {
     background-color: var(--dark-green);
-    color: var(--twhite);
+    color: var(--white);
 }
 /******************        SECTION 2  (QUI SUIS JE )   SECTION  4  ( DIPLOME )*****************/
 
 #section2 , #section4{
-    color: var(--twhite);
+    color: var(--white);
     height: 100vh;
 }
 .title-accordion{
@@ -116,7 +114,7 @@ img{
     /* overflow pour générer si besoin un scroll à l'intérieur des sections de l'accordéon */
     overflow: auto;
     /* Utilisation d'une variable crée grâce au pseudo-élément :root en début de fichier */
-    color: var(--twhite);
+    color: var(--white);
 }
 .diplomes{
     background-color: var(--light-green);
@@ -139,34 +137,100 @@ img{
 /******************        SECTION 5  ( CONTACT )   *******************/
 
 #section5{
-    background-color: #fff;
-    color: var(--light-green);
+    background: linear-gradient(45deg, var(--light-green), var(--dark-green));
+    color: var(--white);
+    padding-top: 100px;
+    padding-bottom: 200px;
+    border-top: 2px solid var(--twhite);
+}
+#section5 .container{
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    z-index: 1;
 }
 #formulaire{
-    box-shadow: 0em 0.2em 1.5em var(--light-green);
-    border-radius: 0.4em;
+    border-radius: 1em;
+    background-color: var(--twhite);
+    border-left: 1px solid var(--twhite);
+    border-top: 1px solid var(--twhite);
+    box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, .2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    -moz-backdrop-filter: blur(10px);
+    z-index: 1;
 }
 #message{
     /* Le resize none permet d'enlever le curseur qui agrandit l'espace de texte*/
     resize: none;
 }
-#section5 label, input , button{
+#section5 label, button{
     font-family: 'Philisopher', Verdana, Helvetica, sans-serif;
+    opacity: .8;
+    font-size: 1.1em;
+}
+#section5 input, #message{
+    background: transparent;
+    border: none;
+    border-left: 1px solid var(--twhite);
+    border-top: 1px solid var(--twhite);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    -moz-backdrop-filter: blur(5px);
+    box-shadow: 4px 4px 60px rgba(0, 0, 0, .2);
 }
 .bouton-valider {
-    background-color: var(--light-green);
-    border-color:var(--light-green);
+    background: var(--dark-green);
+    border-color: var(--light-green);  
+    box-shadow: 4px 4px 60px rgba(0, 0, 0, .2);  
+    padding: 10px;
+    border: none;
+    border : 2px solid var(--dark-green);
+    transition: all .3s;
 }
 .bouton-valider:hover{
-    color: var(--twhite);
-    background-color: var(--dark-green);
+    border : 2px solid var(--dark-green);
+    background: linear-gradient(45deg, var(--dark-green), var(--light-green));
+}
+.drop{    
+    position: absolute;
+    background: var(--twhite);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    -moz-backdrop-filter: blur(5px);
+    border-left: 1px solid var(--twhite);
+    border-top: 1px solid var(--twhite);
+    border-radius: 10px;
+    box-shadow: 10px 10px 60px -8px rgba(0, 0, 0, .2);
+}
+.drop-1{
+    height: 100px;
+    width: 100px;
+    top:-20px;
+    left: -40px;
+    z-index: -1;
+}
+.drop-2{
+    height: 120px;
+    width: 120px;
+    bottom:-20px;
+    right: -40px;
+    z-index:1;
+}
+.drop-3{
+    height: 24em;
+    width: 15em;
+    bottom:30%;
+    right: 20%;
+    z-index:-1;
 }
 /******************         MERCI.HTML       *******************/
 #merci{    
     /*L'élement ayant une petite hauteur, la propriété min-height va au minimum couvrir la hauteur de l'écran*/
     min-height: 100vh;
     align-items: center;
-    color: var(--twhite);
+    color: var(--white);
 }
 /******************         FOOTER       *******************/
 
@@ -174,17 +238,18 @@ img{
 {
     background-color:var(--light-green);     
     font-family: 'Parisienne',Verdana, Helvetica, sans-serif;
+    border-top: 2px solid var(--twhite);
 }
 #footer a{
     font-family: 'Philisopher', Verdana, Helvetica, sans-serif;
-    color: var(--twhite);
+    color: var(--white);
     text-decoration: none;
 }
 .icon{
     width: 65px;
     height: 65px;
     border-radius: 50px;
-    color: #fff;
+    color:var(--white);
     transition: all .4s;
     filter: drop-shadow(0 2px 5px var(--dark-green));
 
